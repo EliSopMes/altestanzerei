@@ -1,0 +1,25 @@
+.swiper-slide {
+  height: 250px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.images {
+  height: 300px;
+  width: 740px;
+  background-size: cover;
+}
+
+.wrapper-swiper {
+  height: 300px;
+  width: 740px;
+}

@@ -3,4 +3,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root to: 'pages#home'
+
+  get 'requests/new', to: 'requests#new'
+  post 'requests/create', to: 'requests#create'
+
+  resources :flats do
+    resources :requests, only: %i[new create]
+  end
+
+  get 'pages/impressum', to: 'pages#impressum', as: 'impressum'
+  get 'pages/agbs', to: 'pages#agbs', as: 'agbs'
 end

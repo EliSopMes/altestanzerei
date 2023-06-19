@@ -1,0 +1,10 @@
+<h3>Es gibt eine neue Anfrage für <%= @request.flat.name %></h3>
+<p><%= @request.first_name %> <%= @request.last_name %> will die Wohnung für den Zeitraum von <%= @request.from.strftime("%d.%m.%Y") %>
+bis <%= @request.to.strftime("%d.%m.%Y") %> für <%= @request.number_guests > 1 ? "#{@request.number_guests} Personen" : "eine Person" %> mieten.</p>
+<p>Die Kontakdaten lauten: </p>
+<p>Telefon: <%= @request.phone %></p>
+<p>Email: <%= @request.email %></p>
+<% if @request.message != nil %>
+  <p>Der Anfrager hat folgende Nachricht hinterlassen:</p>
+  <p><%= @request.message %> </p>
+<% end %>
